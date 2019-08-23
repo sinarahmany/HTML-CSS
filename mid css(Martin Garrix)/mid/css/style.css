@@ -1,0 +1,140 @@
+body{
+		margin: 0;
+		font-family: 'Open Sans', sans-serif;
+					flex-wrap: wrap;
+	justify-content: space-around;
+
+		}
+header{
+		margin: 0 auto;
+		background-color: #02052D;
+		}
+	    ul {
+            list-style-type:none;
+            margin: 0 auto;
+              overflow: hidden;
+  background-color: #333;
+  padding: 0; 
+        	/*max-height:56px;*/
+        }
+        nav{
+        	position: fixed;
+        	width: 100%;
+        	z-index: 1
+
+
+
+
+                }
+		nav ul li {
+			margin:0 auto;
+			display: inline-block;			
+			text-align: center;
+		}
+		
+		nav ul a{
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+		}
+	nav ul	a:hover{
+  background-color: #581F65;
+  color: black;
+		}
+		.home{
+			  background-color: black;
+  color: white;
+		}
+		.logo{
+			padding: 0;
+			/*display: inline-block;*/
+		}
+
+		.logo2{
+			/*margin-left: 100px;*/
+			display: inline-block;
+			position: relative;
+
+
+		}
+		.floater{
+			float: right;
+		}
+
+section.imga{
+	background-image: url(../images/background.jpg);
+	height: 500px;
+			width: 100% ;
+			background-size:cover;
+			background-position: bottom;
+	        overflow:hidden;
+	        margin:0 auto;
+		    background-attachment: fixed;
+}
+article{
+			margin: 50px auto;
+			height: 600px;
+			width: 500px;
+			padding-top: 20px;
+							
+		    background-color: whitesmoke;
+		    overflow:auto;
+		    text-align: left;
+
+		}
+		figure img{
+			margin: 0 auto ;
+		    height: 200px;
+		    width: 200px;
+		     position: relative;
+
+
+		                
+		}
+		figure{
+			margin: 0 auto ;
+		    height: 200px;
+		    width: 200px;
+		     border-radius: 100%;
+		    
+		    overflow: hidden;
+		}
+		p {
+			margin: 20px 41px;
+		}
+		h1{
+			text-align: center;
+			margin: 20px auto;
+			/*height: 99px;*/
+		}
+		main{
+			display:flex;
+			flex-wrap: wrap;
+        	justify-content: space-around;
+		}
+
+@media only screen and (max-width:1124px){
+	body{
+		justify-content:flex-start;
+	}
+		nav{
+		position: absolute;
+	}
+	article{
+		min-width: 70%;
+	}
+}
+
+@media only screen and (max-width:576px){
+
+	article{
+		min-width: 90%;
+	}
+	nav{
+		position: absolute;
+	}
+}

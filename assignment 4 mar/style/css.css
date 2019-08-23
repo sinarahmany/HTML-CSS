@@ -1,0 +1,307 @@
+h1,h2,h3,h4,h5,h6{font-family: 'Acme', sans-serif;}
+p{font-family: 'Acme', sans-serif;}
+
+body{margin:0; background-color: #0F2027  }
+.sp{
+	margin: 0;
+	padding: 0;
+	margin-left: -100%;
+	color: whitesmoke;
+	position: sticky;
+    margin-top: 100%;
+}
+h3 {
+	text-decoration: none;
+	overflow: hidden;
+  margin: 0;
+}
+
+
+.container{
+	/*height:100vh;*/
+	/*width:90vw;*/
+	margin:0 auto;
+	display:grid;
+	grid-template-areas:"header header "
+						"left main "
+						"footer footer ";;
+	grid-template-columns: 4fr 8fr; 
+	grid-template-rows:4fr 4fr 1fr;
+	grid-gap:8px;
+}
+.cell-1{
+
+	/*background:#2539A4;*/
+	grid-area:header;
+}
+
+.cell-2{
+	
+	grid-area:left;
+}
+
+.cell-3{
+	
+	grid-area:main;
+}
+.cell{
+	color: white;
+   	font-size: 2.5rem;
+   	text-align: center;
+   	padding: 3rem;
+   	background: linear-gradient(#0F2027,#12121E,#12121E,#203A43,#2C5364);
+}
+
+.cell p{
+	text-align: left;
+	/*font-size:1rem;*/
+}
+
+.flex{
+	display:flex;
+	flex-wrap: wrap;
+}
+section.imga{
+	        background-image:url("../images/backg.jpg");
+        min-width: 400px;
+
+			height: 500px;
+      
+			background-size:cover;
+			color:black;
+	        background-position:right;
+	        overflow:hidden;
+	        margin:0 auto;
+		    background-attachment: fixed;
+        /*for the border*/
+  padding: 1rem;
+  color: #12121E;
+  border-width: 3px;
+  border-style: solid;
+  border-image:
+    linear-gradient(to bottom, #12121E, #2C5364) 1 10%;
+
+    box-shadow: 0 0 18px 8px #12121E inset;
+    opacity:  0.4 to 0.9 ;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+header .overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+header div .overlay a:hover, .overlay a:focus {
+  color: #f1f1f2;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+#forimages{
+	position: relative;
+    top: 0;
+    left: 0;
+    margin: 0 auto ;
+    height: 200px;
+    /*the width is just to set the size of the border same as the picture */
+    max-width: 68.5%;
+    /*border-radius: 5%;*/	    
+	overflow: hidden;
+  box-shadow: 0 0 18px 8px #12121E inset;
+  /*for the border*/
+   padding: 1rem;
+  color: #12121E;
+  border-width: 3px;
+  border-style: solid;
+  border-image:
+    linear-gradient(to bottom, #0F2027, #203A43) 1 10%;
+
+    box-shadow: 0 0 18px 8px #12121E inset;
+    min-width: 368.5px;
+}
+.imag2{
+	opacity: 0;
+	position: absolute;
+    top: 0;
+    left: 0;
+}
+.imag1{
+	opacity: 1.0;
+	position: absolute;
+    top: 0;
+    left: 0;
+}
+.s{
+
+	position: relative;
+	/*left: 240px;
+	bottom: 200px;*/
+}
+aside a{
+            text-decoration:none;
+            background-color:#12121E ;
+            color:grey;
+            transition:background-color 3s, color 2s, border-radius 3s;
+            border-radius: 30%;
+            overflow: hidden;
+            padding-right: 10px;
+            padding-left: 10px;
+}
+aside a:hover{
+            background-color:#203A43;
+            color:#743ad5;
+            border-radius:8px;
+            
+}
+.bo{
+	height: 200px;
+
+}
+.title .hidden{
+	visibility: hidden;
+    width: 500px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    opacity: 0.01;
+    transition:visibility 3s,width 2s,opacity 4s;
+
+  /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+.title:hover .hidden{
+	visibility: visible;
+	width: 600px;
+	opacity: 1.0;
+}
+.title{
+	border-bottom: 1px dotted black;
+	position: relative;
+    display: inline-block;
+    text-decoration:none;
+            background-color:black;
+            color:purple;
+            transition:background-color 3s, color 2s, border-radius 3s;
+            border-radius: 20%;
+            
+            padding-right: 10px;
+            padding-left: 10px;
+
+}
+:hover.title{
+	background-color:orange;
+            color:brown;
+            border-radius:8px;
+
+}
+#birthp{
+  padding: -100px;
+}
+#bowling{
+  background-image: url(../images/bowling.jpg);
+
+   width: 200px;
+    height: 200px;
+    background-size:cover;
+    background-position: center;
+    margin: auto;
+
+  box-shadow: 0 0 18px 10px #12121e inset;
+}
+.north-head{
+  text-decoration:none;
+  color:grey;
+
+transition:color 2s;
+}
+.north-head:hover{
+  color:#743ad5;
+   
+
+}
+/*this is for animation in the footer*/
+footer{
+  background:#20191b;
+  grid-area:footer;
+}
+.anim {
+  font-family: "Montserrat";
+  text-align: center;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30vh;
+  letter-spacing: 1px;
+  float: right;
+  margin-right: 50px;
+}
+
+.animh {
+  background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-size: 120px;
+  line-height: .75;
+  margin: 10px 0;
+}
+/* styling my button */
+
+.white-mode {
+  text-decoration: none;
+  padding: 7px 10px;
+  background-color: #122;
+  border-radius: 3px;
+  color: #FFF;
+  transition: .35s ease-in-out;
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  font-family: "Montserrat";
+}
+
+.white-mode:hover {
+  background-color: #FFF;
+  color: #122;
+}
+
+
+
+
+
+
+

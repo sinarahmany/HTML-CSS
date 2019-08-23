@@ -1,0 +1,243 @@
+*{box-sizing:border-box; color:#9a9078;}
+
+body{margin:0;
+}
+
+
+header{
+	padding:0;
+	width:100%;
+	font-family: 'Cormorant Garamond', serif;
+}
+.divh{
+	display:flex;
+	justify-content: center; 
+}
+
+nav{
+	display:block;
+	overflow:hidden;
+	background: #bcc2ca;
+}
+#logo{
+	height: 50px;
+	width: 50px;
+	opacity: 0.9;
+	float: right;
+}
+
+nav a{
+	float:left;
+	display:block;
+	padding: 14px 16px;
+	font-weight:700;
+	color:#47342f;
+	text-decoration:none;
+}
+
+nav a:hover{
+	background:#888c91;
+	color: #bcc2ca
+}
+
+nav a:last-child{
+	float:right;
+	display:none;
+}
+
+/*for slide*/
+header figure img{width:100%;
+	max-height: 680px;
+	max-width: 1120px;
+}
+
+/*Managing images*/
+section.slide-container{
+	position:relative;
+	/*margin: 0 300px;*/
+/*	width: 50%;*/
+}
+
+/*By default, let's hide all of them*/
+.slide-container figure{display:none;margin:0;}
+
+/*Managing arrows*/
+.prev, .next{
+	position:absolute;
+	top:50%;
+}
+
+.prev{left:10px;}
+.next{right:10px;}
+i.fas{transition:color .3s ease;}
+.prev:hover i.fas,.next:hover i.fas{color: #f1e9d5;}
+
+/*Managing the number of the current slide*/
+.text-num{
+	position:absolute;
+	top:10px;
+	left:10px;
+	background:#f1e9d5;
+	padding:5px 6px;
+}
+
+/*Captions for each image*/
+.slide-container figure figcaption{
+	position:absolute;
+	bottom:8px;
+	left:50%;
+	transform:translate(-50%);
+	text-align: center;
+	background:#f1e9d5;
+	padding:0px 8px;
+}
+
+/*Dots underneath the slideshow*/
+.dots{
+	display:flex;
+	justify-content: center;
+}
+
+.dot{
+	cursor:pointer;
+	display:inline-block;
+	height:15px;
+	width:15px;
+	background:#f5eada;
+	border-radius:50%;
+	margin:0px 5px;
+	transition:background .3s ease;
+}
+
+.dot:hover, .active{background:#d2a47f;}
+
+
+
+article{
+			margin: 50px auto;
+			height: 600px;
+			width: 500px;
+			padding-top: 20px;
+							
+		    background-color: #61564f24;
+		    background: opacity:0.3;
+		    overflow:auto;
+		    text-align: left;
+		    font-family: 'Scheherazade', serif;
+		    font-size: 20px;
+		    font-weight: 600;
+
+
+		     padding: 1rem;
+  color: #12121E;
+  border-width: 3px;
+  border-style: solid;
+  border-image:
+    linear-gradient(to bottom, white, #bcc2ca) 1 10%;
+
+/*    box-shadow: 0 0 18px 8px #bcc2ca inset;
+    opacity:  0.4 to 0.9 ;*/
+
+		}
+		article div img{
+			margin: 0 auto ;
+		    height: 200px;
+		    width: 200px;
+		     position: relative;
+
+
+		                
+		}
+		.border{
+			margin-top: 10px;
+			width: auto;
+			height: auto;
+  color: #12121E;
+  border-width: 3px;
+  border-style: solid;
+  border-image:
+    linear-gradient(to bottom, white, #bcc2ca) 1 10%;
+    background-color: whitesmoke;
+
+		}
+		article div{
+			margin: 0 auto ;
+		    height: 200px;
+		    width: 200px;
+		     border-radius: 10%;
+		    
+		    overflow: hidden;
+		}
+		article p {
+			margin: 20px 41px;
+		}
+		article h1{
+			text-align: center;
+			margin: 20px auto;
+			/*height: 99px;*/
+		}
+		main{
+			display:flex;
+			flex-wrap: wrap;
+        	justify-content: space-around;
+        	margin:8px;
+		}
+		footer{
+			/*display:flex;
+			flex-wrap: wrap;
+        	justify-content: space-around;*/
+			height: 50px;
+			background-color: #47342f
+
+		}
+		.foot{
+			text-align: right;
+			padding-right:  10px;
+			margin-bottom: 0px;
+			padding-top: 30px;
+						color:#bcc2ca;
+		}
+		.icon{
+			float: left;
+			position: relative;
+		}
+
+
+@media only screen and (max-width:1124px){
+	body{
+		justify-content:flex-start;
+	}
+	article	nav{
+		position: absolute;
+	}
+	main article{
+		min-width: 70%;
+	}
+/*	section.slide-container{
+	position:relative;
+	margin: 0 200px;
+}*/
+}
+
+@media only screen and (max-width:576px){
+
+	article{
+		min-width: 90%;
+	}
+	article nav{
+		position: absolute;
+	}
+/*	section.slide-container{
+	position:relative;
+	margin: 0 100px;
+}*/
+}
+@media only screen and (max-height:700px){
+	main article{
+		width: 90%;
+		/*i will do this because of the scroll in the boxes so the user can easily scroll the box or the page */
+		margin-right: 99px;
+	}
+
+}
+
