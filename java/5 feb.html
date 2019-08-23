@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>accessing to DOM</title>
+	<link href="https://fonts.googleapis.com/css?family=Sigmar+One" rel="stylesheet">
+	<style>
+		*{
+			font-family: 'Sigmar One', cursive;
+		}
+
+		.output{
+			color:tomato;
+		}
+
+	</style>
+</head>
+<body>
+	<h1 id="title">Accessing the DOM</h1>
+	<br>
+	<p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam aliquam suscipit non distinctio ipsum tempora dolor reprehenderit, eveniet consectetur, fuga animi! Assumenda, voluptate delectus natus quisquam perspiciatis, accusantium placeat temporibus.</p>
+
+	<hr>
+	<!-- outputs -->
+	<h2 id="title-out" class="output"></h2>
+	<p id="paragraph-output" class="output"></p>
+	<h3 id="sumout" class="output"></h3>
+
+	<script type="text/javascript">
+	    var input = document.getElementById("title").innerHTML;
+	    // var user = prompt("give me a title");
+	
+	    // document.getElementById("title-out").innerHTML = user;
+
+
+
+	   var num1 = parseInt(prompt("give me a number"));
+	   while(isNaN(num1)){
+	   	num1 = parseInt(prompt("num1 is not a number"));
+	   }
+	   var num2 = parseInt(prompt("give me another number"))
+	   while(isNaN(num2)){
+	   	num2 = parseInt(prompt("num2 is not a number"));
+	   }
+
+	   
+
+	   var sum  = num1 + num2 
+	   document.getElementById("title-out").innerHTML = "The sum of your number is:" + sum ;
+
+
+
+
+
+
+
+
+	</script>	
+</body>
+</html>

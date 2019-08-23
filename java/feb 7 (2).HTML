@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>hfg</h1>
+	<h1 id="animal"></h1>
+	<h2 id="animaltwo"></h2>
+	<h2 id="a" 	></h2>
+	    <script type="text/javascript">
+		    var animals= ["cat","dog","giraf","frog","elephant","goose"];
+		    var names = ["sina","sinaa","sinaaa","sinaaaa","sinaaaaa"];
+		    var age = [2,45,54,7,3456,456,74];
+		    animals[4] = "ant";
+		    var animal =`hi , i am a ${animals[4]}and my name is ${names[4]}.i am ${age[1]} years old.` ;
+		    var animaltwo = `hi,i am a ${animals[2]} and my name is ${names[4]}.i am ${age[5]} years old.`;
+
+            document.getElementById("animal").innerHTML= animal;
+            document.getElementById("animaltwo").innerHTML=animaltwo;
+
+            var sum=0;
+            var total=0;
+            for(var i=0 ;i< age.length; i++
+             ){sum=sum+age[i];}
+            {
+            	total=sum/age.length;}
+            	document.getElementById("a").innerHTML = "ur avg is"+ total;
+        </script>
+
+
+ </body>
+</html>

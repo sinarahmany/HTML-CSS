@@ -1,0 +1,46 @@
+body{
+		margin: 0;
+
+		}
+header{
+		/*margin: 0 auto;*/
+		background-color: #02052D;
+		}
+	    ul {
+            list-style-type:none;
+            margin: 0 auto;
+              overflow: hidden;
+  background-color: #333;
+
+            
+        }
+		nav ul li {
+			margin:0 auto;
+			display: inline-block;			
+			text-align: center;
+		}
+		
+		nav ul a{
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+		}
+	nav ul	a:hover{
+  background-color: #ddd;
+  color: black;
+		}
+		.home{
+			  background-color: #4CAF50;
+  color: white;
+		}
+		@media screen and (max-width: 600px) {
+  ul a:not(:first-child) {display: none;}
+  ul a {
+    float: right;
+    display: block;
+  }
+}
