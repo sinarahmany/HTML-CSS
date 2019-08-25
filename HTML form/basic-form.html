@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+<h2>Really basic form example:</h2>
+
+<!-- PLEASE NOTE: it's possible to declare inputs even outside of the <form> tags. But, in case you need to send information to another page, you need the <form></form>. -->
+
+			<!-- The ACTION specifies where these information will go. Usually they are processed on the backend, so the form is a way to send data provided by the user from the frontend to the backend. The METHOD instead specifies in which way these information will be sent. For example:
+
+			GET method -> sends data through URL (the address of the request), visibile by the user.
+			POST method -> sends data through the body of the HTTP request, not visible by the user.
+
+			-->
+
+<!-- <label> are used for the user for identify better what we expect from that input. Also, if you specify the "for" attribute you can click on the label and it will allow you to write in the corresponding input -->
+
+	<!-- ATTRIBUTES EXPLANATION -->
+<!-- placeholder attribute is used for creating a sample content. Again, this indicates to the user what we expect from him. -->
+<!-- required, as the name says, make the input mandatory. -->
+<!-- autofocus, as the name says, make the input focus automatically when the page loads. -->
+<!-- disabled, as the name says, make impossible for the user to write into the input. -->
+
+	<form>
+		<!-- input text -->
+		<label for="">First name:</label><br>
+	  	<input type="text" name="firstname" id="firstname" placeholder="John">
+		<br>
+		<!-- input text -->
+		<label for="lastname">Last name:</label><br>
+		<input type="text" name="lastname" id="lastname" autofocus>
+		<br>
+		<!-- input number -->
+		<label for="age">Age:</label><br>
+		<input type="number" name="age" id="age" required>
+		<br>
+		<!-- input number -->
+		<label for="wage">Desired wage:</label><br>
+		<input type="number" name="age" id="wage" disabled>
+		<br>
+		<br>
+		<!-- input button for submitting (looks like a button)-->
+		<input type="submit" value="send">
+	</form>
+	
+</body>
+</html>

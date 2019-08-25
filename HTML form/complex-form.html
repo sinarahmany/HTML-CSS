@@ -1,0 +1,142 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Contact form</title>
+	</head>
+	<body>
+
+	<h2>Enriched form example</h2>
+
+			<!-- PLEASE NOTE: it's possible to declare inputs even outside of the <form> tags. But, in case you need to send information to another page, you need the <form></form>. -->
+
+			<!-- The ACTION specifies where these information will go. Usually they are processed on the backend, so the form is a way to send data provided by the user from the frontend to the backend. The METHOD instead specifies in which way these information will be sent. For example:
+
+			GET method -> sends data through URL (the address of the request), visibile by the user.
+			POST method -> sends data through the body of the HTTP request, not visible by the user.
+
+			-->
+			<form action="#" method="POST">
+
+				<!-- You can create an entire form with a single emmet query, even though it becomes difficult to read. This is the query I ran for creating it (I manually made some changes after, but it's to give you an idea): -->
+				
+				<!-- (label[for="firstName"]{First name:}+br+input:text#firstName[name="firstName" placeholder="Oliver" required])+br*2+(label[for="lastName"]{Last name:}+br+input:text#lastName[name="lastName" placeholder="Twist" required])+br*2+(label[for="email"]{Email:}+br+input:email#email[name="email" value="oliver@twist.com"])+br*2+(label[for="gender"]{Gender:}+br+(input:radio#gender$[name="gender" value=""]+label[for="gender$"]+br)*3)+br*2+(label[for="books"]{How many books do you read in a year?}+br+(select#books>option[value="$"]{$}*10))+br*2+(label[for="genres"]{Favourite genres}+br+(input:checkbox[name="genres"]+label+br)*5)+(input:hidden#token[value="asdfu238173JHFQU1873gahjduT213GUr921" name="token"])+br*2+(label[for="hours"]{How many hours per day you read:}+br+input:range#hours[min="0" max="24" step="2" value="4"]+br*2+input:submit[value="Submit"] -->
+
+				<label for="firstName">First name:</label>
+				<br>
+				<input type="text" name="firstName" id="firstName" placeholder="Oliver" required="">
+				<br>
+				<br>
+				<label for="lastName">Last name:</label>
+				<br>
+				<input type="text" name="lastName" id="lastName" placeholder="Twist" required="">
+				<br>
+				<br>
+				<label for="email">Email:</label>
+				<br>
+				<input type="email" name="email" id="email" value="oliver@twist.com" autofocus>
+				<br>
+				<br>
+				<label for="number">Phone Number:</label>
+				<br>
+				<input type="number" name="number" id="number">
+				<br><br>
+				<label for="gender">Gender:</label>
+				<br>
+				<!-- radio inputs: only one can be selected, they are grouped by the name -->
+				<input type="radio" name="gender" id="gender1" value="">
+				<label for="gender1">Male</label>
+				<br>
+				<input type="radio" name="gender" id="gender2" value="">
+				<label for="gender2">Female</label>
+				<br>
+				<input type="radio" name="gender" id="gender3" value="">
+				<label for="gender3">Other</label>
+				<br>
+				<br>
+				<br>
+				<!-- dropdown menu -->
+				<label for="books">How many books do you read in a year?</label>
+				<br>
+				<select name="" id="books">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7" selected>7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10+">10+</option>
+				</select>
+				<br>
+				<br>
+				<label for="genres">Favourite genres</label>
+				<br>
+				<!-- checkbox inputs: multiple selections are allowed -->
+				<input type="checkbox" name="genres" value="Action" id="Action">
+				<label for="Action">Action</label>
+				<br>
+				<input type="checkbox" name="genres" value="History" id="History" checked>
+				<label for="History">History</label>
+				<br>
+				<input type="checkbox" name="genres" value="Science fiction" id="science-fiction">
+				<label for="science-fiction">Science fiction</label>
+				<br>
+				<input type="checkbox" name="genres" value="Drama" id="Drama">
+				<label for="Drama">Drama</label>
+				<br>
+				<input type="checkbox" name="genres" value="Essays" id="essays" checked>
+				<label for="essays">Essays</label>
+				<input type="hidden" name="token" id="token" value="asdfu238173JHFQU1873gahjduT213GUr921">
+				<br><br>
+				<!-- range input -->
+				<label for="hours">How many hours per day you read:</label><br>
+				<input type="range" name="hours" id="hours" min="0" max="24" step="2" value="4">
+				<br>
+				<br>
+				<input type="submit" value="Submit">
+
+			</form>
+
+			<br>
+			<hr>
+		
+		<br>
+		<h4>Just some small improvements use <i>datalists</i>:</h4>
+		<!-- Just a quick improvement of the range input: -->
+		<input type="range" list="tickmarks" step="10" min="0" max="100" value="80">
+		<!-- Datalist sets the input range to the option value, at creates a better interface for the user  -->
+		<datalist id="tickmarks">
+		  <option value="0" label="0%"></option>
+		  <option value="10">
+		  <option value="20">
+		  <option value="30">
+		  <option value="40">
+		  <option value="50" label="50%">
+		  <option value="60">
+		  <option value="70">
+		  <option value="80">
+		  <option value="90">
+		  <option value="100" label="100%">
+		</datalist>
+
+		<br><br>
+
+		<input list="colors" name="color">
+		<datalist id="colors">
+		  <option value="Red">Red</option>
+		  <option value="Orange">Hello!</option>
+		  <option value="Blue">Blue</option>
+		  <option value="Green">Green</option>
+		</datalist>
+
+		<br><br>
+
+
+		<!-- For more details about datalists: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist -->
+		<!-- PLEASE NOTE: a datalist is NOT the same of a dropdown! The user is allowed to type whatever he wants if we use a datalist like in the last example. With a range, instead, it provides a better visualization of the value he is selecting.  -->
+
+	</body>
+	</html>
