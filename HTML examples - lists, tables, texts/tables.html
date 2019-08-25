@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tables</title>
+</head>
+<body>
+
+	<h3>Web design: Tables</h3>
+	<hr>
+	<!-- This code represent a basic table in HTML 
+		The tags <thead> define the headings of the table, while inside the <tbody> we put all our data.
+
+		Every column has a different heading name, defined with the tags <th>.
+		
+		We add new rows into our table using the tag <tr>. Then, we use the tag <td> (which stands for Table Data) to write our
+		information on that row. Basically, the <td> tags create a table cell.
+	-->
+	<p>Example of a basic table:</p>
+
+	<table border="1">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>City</th>
+			</tr>
+		</thead>
+		<tbody>
+
+			<tr>
+				<td>1</td>
+				<td>John</td>
+				<td>Mayer</td>
+				<td>Connecticut</td>
+			</tr>
+
+			<tr>
+				<td>2</td>
+				<td>Hans Christian</td>
+				<td>Handersen</td>
+				<td>Odense</td>
+			</tr>
+
+			<tr>
+				<td>3</td>
+				<td>Franz</td>
+				<td>Liszt</td>
+				<td>Raiding</td>
+			</tr>
+
+			<tr>
+				<td>4</td>
+				<td>Leonardo</td>
+				<td>Sciascia</td>
+				<td>Racalmuto</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<br>
+	<!-- In some cases, you may want a specific table cell (it works with both <th> or <td>) to take multiple rows or multiple columns. You can do that thanks to attributes. 'rowspan' defines how many rows the element will take. 'colspan' defines how many columns the element will take.
+	 -->
+	 <br>
+
+	 <p>Example of a table where a cell take more columns:</p>
+
+	 <table border="1">
+	 	<thead>
+	 		<tr>
+	 			<th colspan="4">Hey there! I take 4 columns of space.</th>
+	 		</tr>
+	 		<tr>
+				<th>ID</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>City</th>
+			</tr>
+	 	</thead>
+	 	<tbody>
+
+	 		<tr>
+				<td>1</td>
+				<td>John</td>
+				<td>Mayer</td>
+				<td>Connecticut</td>
+			</tr>
+
+			<tr>
+				<td>2</td>
+				<td colspan="2">And I take two columns</td>
+				<td>Odense</td>
+			</tr>
+
+			<tr>
+				<td>3</td>
+				<td>Franz</td>
+				<td>Liszt</td>
+				<td>Raiding</td>
+			</tr>
+
+			<tr>
+				<td>4</td>
+				<td colspan="3">I take 3 of them!</td>
+			</tr>
+	 	</tbody>
+	 </table>
+
+
+	 <br>
+	 <br>
+
+	 <p>Example of a table where a cell take more columns:</p>
+
+	 <table border="1">
+	 	<thead>
+	 		<tr>
+				<th>ID</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>City</th>
+			</tr>
+	 	</thead>
+	 	<tbody>
+
+	 		<tr>
+				<td>1</td>
+				<td>John</td>
+				<td>Mayer</td>
+				<td rowspan="2">Hello! I take 2 rows of space instead.</td>
+			</tr>
+
+			<tr>
+				<td>2</td>
+				<td>Hans Christian</td>
+				<td>Andersen</td>
+			</tr>
+
+			
+			<tr>
+				<td>3</td>
+				<td>Franz</td>
+				<td>Liszt</td>
+				<td>Raiding</td>
+			</tr>
+
+			<tr>
+				<td>4</td>
+				<td>Leonardo</td>
+				<td>Sciascia</td>
+				<td>Racalmuto</td>
+			</tr>
+	 	</tbody>
+	 	</tbody>
+	 </table>
+
+</body>
+</html>
